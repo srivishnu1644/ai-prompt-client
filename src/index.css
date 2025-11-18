@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: transparent;
+}
+
+.animate-gradient-bg {
+  background: linear-gradient(
+    -45deg,
+    #100b1a,
+    #2a0a55,
+    #0a1f55,
+    #1b0a2a,
+    #0a0a0a
+  );
+  background-size: 600% 600%;
+  animation: gradient-bg-animation 20s ease infinite;
+  pointer-events: none;
+  transition: background 0.5s ease-in-out;
+}
+
+html.dark .animate-gradient-bg {
+  background: linear-gradient(-45deg, #000000, #2d3748, #1a202c, #000000);
+  background-size: 400% 400%;
+  animation: gradient-bg-animation 15s ease infinite;
+}
+
+@keyframes gradient-bg-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hover\:shadow-purple-glow:hover {
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.7), 0 0 30px rgba(139, 92, 246, 0.5);
+}
