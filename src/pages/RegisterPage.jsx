@@ -13,7 +13,7 @@ function RegisterPage() {
     setError(null);
     try {
       const response = await fetch(
-        "https://ai-prompt-api-vishnu.onrender.com/api/users/register",
+        `${import.meta.env.VITE_API_URL}/users/register`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

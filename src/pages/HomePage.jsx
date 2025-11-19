@@ -31,7 +31,7 @@ function HomePage() {
         setError(null);
         try {
           const response = await fetch(
-            "https://ai-prompt-api-vishnu.onrender.com/api/prompts",
+            `${import.meta.env.VITE_API_URL}/prompts`,
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -73,17 +73,14 @@ function HomePage() {
     setError(null);
     const currentPrompt = promptInput;
     try {
-      const response = await fetch(
-        "https://ai-prompt-api-vishnu.onrender.com/api/prompts",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({ prompt: currentPrompt }),
-        }
-      );
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/prompts`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ prompt: currentPrompt }),
+      });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Something went wrong");
       setAiResponse(data.response);
