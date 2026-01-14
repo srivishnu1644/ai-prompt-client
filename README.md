@@ -1,4 +1,4 @@
-# 🎨 AI Prompt Generator - Frontend
+# 🎨 AI Prompt Generator - Backend
 
 A modern React application that allows users to generate, view, and manage AI prompts effectively. This is the frontend client built with React, Vite, and Tailwind CSS.
 
