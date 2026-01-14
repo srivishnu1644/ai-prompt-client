@@ -2,7 +2,7 @@
 
 A modern React application that allows users to generate, view, and manage AI prompts effectively. This is the frontend client built with React, Vite, and Tailwind CSS.
 
-🔗 **Backend Repository:** https://github.com/srivishnu1644/ai-prompt-client
+🔗 **Backend Repository:** https://github.com/srivishnu1644/ai-prompt-server
 
 ## 🚀 Features
 
