@@ -18,7 +18,7 @@ function AuthProvider({ children }) {
         logout();
       }
     }
-  }, []); // The empty array [] means this runs only once on mount
+  }, []); 
 
   const login = (newToken) => {
     try {
